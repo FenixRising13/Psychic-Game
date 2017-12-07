@@ -10,6 +10,14 @@ body {
     color: red;
 }
 
+#theHook {
+    margin-left:100px;
+}
+
+article {
+    margin-left:200px;
+}
+
 .footer {
     border-top: dotted 3px gray;
     position: absolute;
