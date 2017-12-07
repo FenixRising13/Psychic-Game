@@ -4,6 +4,7 @@ var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l
 var wins = 0;
 var losses = 0;
 var chances = 15;
+var guessArray=[];
 
 var confirmPsychic = confirm("Are you a psychic?");
 
@@ -26,17 +27,19 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
 
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
+    
     console.log(userGuess);//This is to log the key press
     // If the user guess matches computer guess, you must have ESP(N)
     if (userGuess === computerGuess) {
         wins++;
+        guessArray.push(userGuess);
         chances--;
         console.log("Wins: " + wins);
     }
     // If the user guess doesn't match, don't quit your day job
     else if (userGuess !== computerGuess) {
         losses++;
+        guessArray.push(userGuess);
         chances--;
         console.log("Losses: " + losses);
     }
@@ -59,12 +62,16 @@ document.onkeyup = function (event) {
 
     var html =
         "<p>You chose: " + userGuess + "</p>" +
+        "<p>You previously guessed: " + guessArray + "</p>" +
         "<p>The computer was thinking: " + computerGuess + "</p>" +
         "<p>wins: " + wins + "</p>" +
         "<p>losses: " + losses + "</p>" +
         "<p>chances: " + chances + "</p>";
 
+
     // Set the inner HTML contents of the #game div to our html string
     document.querySelector("#game").innerHTML = html;
+
+    
 };
 
