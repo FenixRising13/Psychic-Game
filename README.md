@@ -1,8 +1,9 @@
 # Psychic-Game
-This is a psychic test. See if you can guess the number the computer has chosen at random.
+
+## Description
+This is a psychic test. See if you can guess the letter the computer has chosen at random.
 
 ## Prerequisites
-
 
 ## Built With
 * HTML
