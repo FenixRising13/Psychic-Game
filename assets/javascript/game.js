@@ -43,17 +43,12 @@ if (confirmPsychic) {
   location.reload();
 }
 
-// alert("Is there a chance you have powers of the supernatural?");
-// alert("See if you can guess which letter the computer is thinking of.");
-
 // Setup event function for key press
 document.onkeyup = function(event) {
   var userGuess = event.key;
 
   var computerGuess =
     computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
-  console.log(userGuess); //This is to log the key press
 
   // Checks to insure that the userGuess is in the array of letters.
   if (computerChoices.includes(userGuess)) {
@@ -62,14 +57,12 @@ document.onkeyup = function(event) {
       wins++;
       guessArray.push(userGuess);
       chances--;
-      console.log("Wins: " + wins);
     }
     // If the user guess doesn't match, don't quit your day job
     else if (userGuess !== computerGuess) {
       losses++;
       guessArray.push(userGuess);
       chances--;
-      console.log("Losses: " + losses);
     }
     // Chances = 0
     if (chances === 0) {

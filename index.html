@@ -15,11 +15,13 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
@@ -41,42 +43,29 @@
   </head>
 
   <body>
-    <!--
-      <audio src="music/twilight-zone-song.mp3" autoplay loop>
-          <p>If you are reading this, it is because your browser does not support the audio element.</p>
-      </audio>
-    -->
+    <div class="container">
+      <header class="page-header"><h1>Psychic Test</h1></header>
 
-    <!-- What are we playing again? -->
-    <header class="page-header"><h1>Psychic Test</h1></header>
-    <!-- Oh that's right -->
-    <!--
-      <h2>Are you a psychic?</h2>
-      <br>
-      <p>Is there a chance you have powers of the supernatural?</p>
-      <p>See if you can guess which letter the computer is thinking of.</p>
-      <br>
-    -->
-    <!---->
-    <div id="theHook">
-      <p>Go ahead...</p>
-      <p>enter a</p>
-      <p id="letter">letter</p>
+      <div id="main">
+        <p>Go ahead...</p>
+        <p>enter a</p>
+        <p id="letter">letter</p>
+      </div>
+      <br />
+      <article class="article" id="game"></article>
+
+      <footer class="footer">
+        <p class="text-muted text-muted-footer text-center">
+          &copy; Copyright 2018 Mark Powalisz
+          <audio
+            src="music/twilight-zone-song.mp3"
+            controls
+            autoplay
+            loop
+          ></audio>
+        </p>
+      </footer>
     </div>
-    <br />
-    <article class="article" id="game"></article>
-
     <script src="assets/javascript/game.js"></script>
-
-    <footer class="footer">
-      <p class="text-muted text-muted-footer text-center">
-        &copy; Copyright 2017 Mark Powalisz
-        <audio src="music/twilight-zone-song.mp3" controls autoplay loop>
-          <!--
-            <p>If you are reading this, it is because your browser does not support the audio element.</p>
-          -->
-        </audio>
-      </p>
-    </footer>
   </body>
 </html>
