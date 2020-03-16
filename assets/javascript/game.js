@@ -44,7 +44,7 @@ if (confirmPsychic) {
 }
 
 // Setup event function for key press
-document.onkeyup = function (event) {
+document.onkeyup = function(event) {
   var userGuess = event.key;
 
   var computerGuess =
@@ -90,12 +90,24 @@ document.onkeyup = function (event) {
   }
 
   var html =
-    "<p>You chose: " + userGuess + "</p>" +
-    "<p>You previously guessed: " + guessArray + "</p>" +
-    "<p>The computer was thinking: " + computerGuess + "</p>" +
-    "<p>wins: <span id='wins'>" + wins + "</span></p>" +
-    "<p>losses: <span id='losses'>" + losses + "</span></p>" +
-    "<p>chances: " + chances + "</p>";
+    "<p>You chose: " +
+    userGuess +
+    "</p>" +
+    "<p>The computer was thinking: " +
+    computerGuess +
+    "</p>" +
+    "<p>You previously guessed: " +
+    guessArray +
+    "</p>" +
+    "<p>Chances:" +
+    chances +
+    "</p>" +
+    "<br/> <p>Wins: <span id='wins'>" +
+    wins +
+    "</span></p>" +
+    "<p>Losses: <span id='losses'>" +
+    losses +
+    "</span></p>";
 
   // Set the inner HTML contents of the #game div to our html string
   document.querySelector("#game").innerHTML = html;
